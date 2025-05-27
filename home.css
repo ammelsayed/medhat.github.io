@@ -12,11 +12,28 @@
     font-weight:350;
 }
 
-#greetings {
+.start {
     max-width: 1000px;
     min-width: 0;
-    font-size: 40px;
-    padding-top: 30px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.start img {
+    width: 350px;
+    height: 420px;
+    margin: 10px;
+    border-radius: 100%;
+    transition: width 0.5s ease
+}
+
+.start #greetings {
+    font-size: 35px;
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
     color: black;
@@ -24,22 +41,35 @@
     font-weight: 100;
     text-shadow: none;
     /* Define transitions for all changing properties */
-    transition: letter-spacing 0.5s ease, font-size 1s ease, text-shadow 1s ease;
+    transition: letter-spacing 0.5s ease, font-size 1s ease, text-shadow 0.3s ease;
 }
 
 @media screen and (min-width: 550px) {
 
-    #greetings:hover {
-        letter-spacing: 0.1em; /* Expand letter spacing */
-        font-size: 45px;
-        text-shadow: 0 0 10px rgba(0,0,0,0.1);
+    /* .start img:hover {
+        width: 305px;
+    } */
+
+    .start #greetings:hover {
+        /* letter-spacing: 0.1em; Expand letter spacing */
+        font-size: 35px;
+        text-shadow: 0 0 5px rgb(24, 8, 118);
     }
 }
 
 @media screen and (max-width: 550px) {
 
-    #greetings {
-        font-size: 30px;
+    .start {
+        flex-direction: column;
+    }
+
+    .start img {
+        width: 250px;
+        height: 320px;
+    }
+    
+    .start #greetings {
+        font-size: 20px;
     }
 
 }
